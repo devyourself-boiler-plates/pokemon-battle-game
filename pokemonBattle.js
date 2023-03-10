@@ -159,4 +159,4 @@ function typeWriterEffect(battle, message, callback, callbackDelay = 0, i = 0) {
   }
 }
 
-// randomBattle();
+randomBattle();
