@@ -39,8 +39,8 @@ class Battle {
     const enemyHealthBarLength = Math.ceil(10 * ((this.enemyPokemon.stats.HP - this.enemyPokemon.damageTaken) / this.enemyPokemon.stats.HP));
     const allyHealthBarLength = Math.ceil(10 * ((this.allyPokemon.stats.HP - this.allyPokemon.damageTaken) / this.allyPokemon.stats.HP));
 
-    const allyHealthBar = this.health.repeat(allyHealthBarLength) + this.damageTaken.repeat(10 - allyHealthBarLength);
-    const enemyHealthBar = this.health.repeat(enemyHealthBarLength) + this.damageTaken.repeat(10 - enemyHealthBarLength);
+    const allyHealthBar = this.health.repeat(allyHealthBarLength) + this.missingHealth.repeat(10 - allyHealthBarLength);
+    const enemyHealthBar = this.health.repeat(enemyHealthBarLength) + this.missingHealth.repeat(10 - enemyHealthBarLength);
     const battleAreaString = `${this.enemyPokemon.name + " ".repeat(25 - this.enemyPokemon.name.length)}
 ${enemyHealthBar + " ".repeat(15 - this.enemyPokemon.avatar.length) + this.enemyPokemon.avatar}
 
@@ -159,4 +159,4 @@ function typeWriterEffect(battle, message, callback, callbackDelay = 0, i = 0) {
   }
 }
 
-randomBattle();
+// randomBattle();
